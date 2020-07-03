@@ -9,19 +9,25 @@
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="/Develop/public/materialize/css/materialize.css"  media="screen,projection"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Budget Tracker</title>
   </head>
   <body>
-    <div class="uk-container uk-container-expand">
-      <div class="total">
-        <div>Your total is: $<span id="total">0</span></div>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo center"><i class="material-icons">attach_money</i>Budget Track</a>
+       
       </div>
-
-      <form class="teal lighten-2">
+    </nav>
+    
+    <div class="container" id="container2">
+      <div class="total center">
+        <h1>Your total is: $<span id="total">0</span></h1>
+      </div>
+      <form>
         <label for="t-name">Transaction Name:</label>
         <input type="text" id="t-name" placeholder="Name" />
 
@@ -29,12 +35,35 @@
         <input type="number" min="0" id="t-amount" placeholder="Amount" />
 
         <div class="transaction-buttons">
-          <!-- <button id="add-btn"><i class="fa fa-plus"></i> Add Funds</button> -->
-          <a button id="add-btn" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+          <button id="add-btn"><i class="fa fa-plus"></i> Add Funds</button>
           <button id="sub-btn">
             <i class="fa fa-minus"></i> Subtract Funds
           </button>
         </div>
+        <p role="alert" class="error"></p>
+      </form>
+      <!-- <form class="row white"> -->
+        <!-- <div class="row"> -->
+          <!-- <div class="col s4"> -->
+            <!-- <label for="tname">Transaction Name:</label> -->
+            <!-- <input class="validate" type="text" id="tname"> -->
+          <!-- </div> -->
+          <!-- <div class="col s4"> -->
+            <!-- <label for="tamount">Transaction Amount:</label> -->
+            <!-- <input class="validate" type="number" id="tamount" placeholder="Amount"> -->
+          <!-- </div> -->
+          <!-- <div class="transaction-buttons col s4"> -->
+            <!-- <button id="add-btn"><i class="fa fa-plus"></i> Add Funds</button>
+            <!-- <a  id="addbtn" class="btn-floating btn waves-effect waves-light green"><i class="material-icons">add</i></a>
+            <a  id="subbtn" class="btn-floating btn waves-effect waves-light red"><i class="material-icons">remove</i></a> -->
+            <!-- <button id="sub-btn"> -->
+              <!-- <i class="fa fa-minus"></i> Subtract Funds -->
+            <!-- </button> -->
+          <!-- </div> --> -->
+        <!-- </div>     -->
+      <!-- </form> -->
+    </div>
+ 
         <p role="alert" class="error"></p>
       </form>
 
@@ -50,10 +79,40 @@
 
       <canvas id="my-chart"></canvas>
     </div>
+  </div>
 
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/db.js"></script>
+    <script src="/index.js"></script> -->
+  </body>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    
     <script src="/db.js"></script>
     <script src="/index.js"></script>
-    <script type="text/javascript" src="/Develop/public/materialize/js/materialize.js"></script>
-  </body>
+  </footer>
 </html>
