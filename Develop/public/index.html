@@ -1,102 +1,154 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="theme-color" content="#317EFB" />
+
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="icons/iconnew2.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="icons/icon5crop.png" />
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom Google Font Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Additional CSS  -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Custom Google Font Link -->
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <!-- Additional CSS  -->
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Budget Tracker</title>
+
   </head>
+
   <body>
-    <nav id="header">
-      <div class="nav-wrapper light-blue accent-4">
-        <img src="icons/iconnew2.png" alt="logo">
+
+    <!-- HEADER -->
+    <nav id="header" class="nav-wrapper light-blue accent-2">
+
+    
+
+        <img class="brand-logo center" src="icons/icon4.png" alt="logo">
         
-        <a href="#" class="brand-logo center">Budget Track</a>
+      
        
-      </div>
-     
+      
      
     </nav>
     
     <div class="container" id="container2">
+
       <div class="total center">
+
         <h1>Balance: $<span id="total">0</span></h1>
+
       </div>
+
       <form>
+
         <label for="t-name">Transaction Name:</label>
+
         <input type="text" id="t-name" placeholder="Name" />
 
         <label for="t-amount">Transaction Amount:</label>
+
         <input type="number" min="0" id="t-amount" placeholder="Amount" />
 
         <div class="transaction-buttons">
+
           <a  id="add-btn" class="btn-floating btn waves-effect waves-light green"><i class="material-icons">add</i></a>
-            <a  id="sub-btn" class="btn-floating btn waves-effect waves-light red"><i class="material-icons">remove</i></a> 
+
+          <a  id="sub-btn" class="btn-floating btn waves-effect waves-light red"><i class="material-icons">remove</i></a> 
+
         </div>
+
         <p role="alert" class="error"></p>
-      </form>
-    </div>
- 
-        <p role="alert" class="error"></p>
+
       </form>
 
+    </div>
+ 
       <div class="transactions">
+
         <table class="striped centered">
+
           <thead>
+
             <th>Transaction</th>
+
             <th>Amount</th>
+
           </thead>
+
           <tbody id="tbody"></tbody>
+
         </table>
+
       </div>
 
       <canvas id="my-chart"></canvas>
+
     </div>
+
   </div>
 
   </body>
-  <footer class="page-footer light-blue accent-4">
+
+  <!-- FOOTER -->
+
+  <footer class="page-footer light-blue accent-3">
+
     <div class="container">
+
       <div class="row">
+
         <div class="col l6 s12">
+
           <h4 class="white-text">Developed and Maintained by Catalina Williams</h5>
+
           <p class="grey-text text-lighten-4">Catalina Williams is a Full Stack Developer with a passion for Front-End design. Graduated the University of Denver's Coding Bootcamp in April 2020. Leveraging her skills to develop beautiful, user-friendly applications.</p>
+
         </div>
+
         <div class="col l4 offset-l2 s12">
+
           <h5 class="white-text">Links</h5>
+
           <ul>
+
             <li><a class="grey-text text-lighten-3" href="https://github.com/catalinarose1361/Budget-Track"> VIEW CODE ON GITHUB
             <li><a class="grey-text text-lighten-3" href="https://catalinarose1361.github.io/Official-Portfolio-/">VISIT CATALINA'S PROFESSIONAL PORTFOLIO</a></li>
             <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/catalinarwilliams/">CONNECT WITH CATALINA ON LINKEDIN</a></li>
             <li><a class="grey-text text-lighten-3" href="https://github.com/catalinarose1361">VISIT CATALINA'S GITHUB PROFILE</a></li>
+
           </ul>
+
         </div>
+
       </div>
+
     </div>
+
     <div class="footer-copyright">
+
       <div class="container">
+
       © 2020 Catalina Williams
     
       </div>
+
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    
     <script src="/db.js"></script>
     <script src="/index.js"></script>
+
   </footer>
+
 </html>
